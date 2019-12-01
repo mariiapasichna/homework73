@@ -14,13 +14,12 @@ public class Main {
         arrayMoreAverage(arr);
     }
 
-    private static void arrayMoreAverage(int[] arr) {
+    private static int[] arrayMoreAverage(int[] arr) {
         double sum = 0;
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
         }
         double average = sum / arr.length;
-        System.out.println(average);
 
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = i + 1; j < arr.length; j++) {
@@ -31,7 +30,6 @@ public class Main {
                 }
             }
         }
-        System.out.println(Arrays.toString(arr));
 
         int count = 0;
         int arr2[] = new int[count];
@@ -41,7 +39,7 @@ public class Main {
                 arr2 = Arrays.copyOfRange(arr, 0, i + 1);
             }
         }
-        System.out.println(Arrays.toString(arr2));
+        return arr2;
     }
 
     private static void createArrayAndInit(int[] arr) {
@@ -49,6 +47,5 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(100);
         }
-        System.out.println(Arrays.toString(arr));
     }
 }
